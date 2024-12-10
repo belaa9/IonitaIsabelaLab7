@@ -50,6 +50,10 @@ namespace IonitaIsabelaLab7.Data
         {
             return _database.DeleteAsync(product);
         }
+        public Task<int> DeleteShopAsync(Shop shop)
+        {
+            return _database.DeleteAsync(shop);
+        }
         public Task<List<Product>> GetProductsAsync()
         {
             return _database.Table<Product>().ToListAsync();
